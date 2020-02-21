@@ -1,6 +1,10 @@
+latex = pdflatex
+compile_effects = *.pdf *.toc *.nav *.out *.aux *.log *.snm
+
 presentation.pdf: presentation.tex
-	pdflatex presentation.tex
+	$(latex) $<
+	$(latex) $<
 
 .PHONY: clean
 clean:
-	rm -rf *.pdf *.toc *.nav *.out *.aux *.log *.snm
+	rm -rf $(compile_effects) 
