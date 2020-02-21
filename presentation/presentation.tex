@@ -1,0 +1,118 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\inserttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.50\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertsubtitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}%\setbeamertemplate{footline}[frame number]
+
+\newcommand*{\warn}{%
+ \item[{\includegraphics[width=0.3cm]{images/bullet.png}}]%
+}
+
+
+%Information to be included in the title page:
+\title{Docker for Windows}
+\subtitle{How to build VS projects inside Windows containers}
+\author{Paweł Weber}
+\institute{Thaumatec Tech Group}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Few words about docker]{Few words about docker}
+
+% What is docker?
+\begin{frame}
+\frametitle{What is docker?}
+\begin{columns}
+\column{0.55\textwidth}
+\begin{itemize}
+	\warn \textbf<1-2>{Basic idea?} 
+  	
+	\begin{itemize}
+		\item<2-> Build
+		\item<2-> Ship
+		\item<2-> Deploy
+  	\end{itemize} 
+  
+	\warn<3-> \textbf<3>{Docker engine}
+  
+	\warn<4-> \textbf<4-8>{Docker architecture}
+  
+	\begin{itemize}
+    	\item<4-> \textbf<5>{The docker deamon}
+    	\item<4-> \textbf<6>{The docker client}
+    	\item<4-> \textbf<7>{Docker registers}
+    	\item<4-> \textbf<8>{Docker objects}
+  	\end{itemize}
+
+  	\warn<9-> \textbf<9->{Use cases?}
+	\begin{itemize}
+		\item<9-> \textbf<10>{Fast \& consistent delivery}
+		\item<9-> \textbf<11>{Easy scaling \& deployment}
+		\item<9-> \textbf<12>{same hw}
+	\end{itemize}
+
+\end{itemize}
+\column{0.45\textwidth}
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/docker_logo.png}<1-2>
+	\includegraphics[width=\columnwidth]{images/engine-components-flow.png}<3>
+	\includegraphics[width=\columnwidth]{images/architecture.png}<4-8>
+	\includegraphics[width=\columnwidth]{images/cicd.png}<9->
+\end{figure}
+\end{columns}
+\end{frame}
+
+% How docker works?
+\begin{frame}
+\frametitle{How docker works?}
+\end{frame}
+
+% Linux vs Windows
+\begin{frame}
+\frametitle{Linux Docker vs Windows Docker}
+\end{frame}
+
+\section[VS build tools in docker container]{VS build tools in docker container}
+
+% What we need to start?
+\begin{frame}
+\frametitle{How to start?}
+\end{frame}
+
+% Dockerfile?
+\begin{frame}
+\frametitle{Dockerfile for Windows}
+\end{frame}
+
+
+
+\end{document}
